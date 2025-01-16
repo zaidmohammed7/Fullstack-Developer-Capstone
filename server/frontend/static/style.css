@@ -124,3 +124,33 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.contactus-image {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.contactus-img {
+    width: 20%;
+}
+
+.divider-line {
+    width: 2;
+    background-color: gray;
+    height: 350px;
+    align-self: center;
+}
+
+.details {
+    flex: 1;
+    text-align: center;
+}
