@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import CarMake, CarModel
 
 
-# Register your models here.
+# Models registration
 admin.site.register(CarMake)
 admin.site.register(CarModel)
 
