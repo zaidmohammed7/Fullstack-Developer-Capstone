@@ -1,9 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponse
+# from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.models import User
-from django.shortcuts import get_object_or_404, render, redirect
+# from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import logout
-from django.contrib import messages
+# from django.contrib import messages
 from datetime import datetime
 
 from django.http import JsonResponse
@@ -47,7 +46,7 @@ def logout_request(request):
 # Create a `registration` view to handle sign up request
 @csrf_exempt
 def registration(request):
-    context = {}
+    # context = {}
 
     data = json.loads(request.body)
     username = data["userName"]
@@ -56,7 +55,7 @@ def registration(request):
     last_name = data["lastName"]
     email = data["email"]
     username_exist = False
-    email_exist = False
+    # email_exist = False
     try:
         # Check if user already exists
         User.objects.get(username=username)
@@ -122,10 +121,10 @@ def get_dealer_details(request, dealer_id):
 
 # Create a `add_review` view to submit a review
 def add_review(request):
-    if request.user.is_anonymous == False:
+    if request.user.is_anonymous is False:
         data = json.loads(request.body)
         try:
-            response = post_review(data)
+            # response = post_review(data)
             return JsonResponse({"status": 200})
         except BaseException:
             return JsonResponse(
